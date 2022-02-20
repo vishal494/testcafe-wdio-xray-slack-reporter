@@ -1,0 +1,16 @@
+{
+    "slackNotification" : "ON",
+    "slackWebhook" : "Your_Slacl_WebHook",
+    "slackChannel" : "#Your_Slack_Channel_Name",
+    "slackUsername" : "smartBOT",
+    "xrayNotification" : "ON",
+    "xrayAuthenticationEndPoint" : "https://xray.cloud.getxray.app/api/v1/authenticate",
+    "xrayImportExecutionEndPoint" : "https://xray.cloud.getxray.app/api/v1/import/execution",
+    "linkToTestPlan" : "ON",
+    "xrayLinkToTestPlanEndPoint" : "https://xray.cloud.getxray.app/api/v1/graphql",
+    "xrayTestPlanID" : "",
+    "xrayTestPlanKey" : "",
+    "xray_client_id" : "Your_Xray_Client_ID",
+    "xray_client_secret" : "Your_Xray_Client_Secret",
+    "ExecutorName" : "Change this in runtime according to user"
+} 
