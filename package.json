@@ -7,17 +7,23 @@
     "name": "vishal494",
     "email": "rvishal494@gmail.com"
   },
-  "main": "lib/index",
-  "files": [
-    "lib"
+  "main": "testcafeReporter/index",
+  "pre-push": [
+    "lint"
   ],
   "scripts": {
+    "build": "rm -rf build && webpack --mode production",
+    "build:dev": "rm -rf build && webpack --mode development",
     "test": "gulp test",
     "publish-please": "publish-please",
-    "prepublish": "publish-please guard"
+    "lint": "eslint config/*.js constants/*.js slackReporter/*.js util/*.js test/*.js testcafeReporter/*.js wdioReporter/*.js wdioService/*.js xrayReporter/*.js --fix"
+  
   },
   "keywords": [
     "testcafe",
+    "wdio",
+    "sray",
+    "slack",
     "reporter",
     "plugin"
   ],
@@ -51,5 +57,8 @@
     "slack-node": "^0.1.8",
     "sync-request": "^6.1.0",
     "webpack-node-externals": "^2.5.2"
+  },
+  "directories": {
+    "test": "test"
   }
 }
