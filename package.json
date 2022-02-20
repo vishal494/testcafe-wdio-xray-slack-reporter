@@ -17,7 +17,6 @@
     "test": "gulp test",
     "publish-please": "publish-please",
     "lint": "eslint config/*.js constants/*.js slackReporter/*.js util/*.js test/*.js testcafeReporter/*.js wdioReporter/*.js wdioService/*.js xrayReporter/*.js --fix"
-  
   },
   "keywords": [
     "testcafe",
