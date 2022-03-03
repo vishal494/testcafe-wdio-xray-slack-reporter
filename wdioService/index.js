@@ -20,10 +20,13 @@ class ReporterService {
 
         deviceName = deviceName ? deviceName : capabilities[0].device;
         const userAgents = `${capabilities[0].platformName}/${deviceName}`;
-        const testCount = this.getCountOfSpecFiles(config);
-        const slack = new SlackMessage(configure);
+        const testCount = capabilities[0].testCasesCount ? capabilities[0].testCasesCount : this.getCountOfSpecFiles(config);
 
-        slack.sendTestStart(startTime, testCount, userAgents);
+        console.log('startTime ', startTime, 'testCount ', testCount, 'userAgents ', userAgents);
+        if (configure.slackNotification.toUpperCase() === 'ON') {
+            const slack = new SlackMessage(configure);
+            slack.sendTestStart(startTime, testCount, userAgents);
+        }
     }
     getCountOfSpecFiles (config) {
         let specFiles = [];
