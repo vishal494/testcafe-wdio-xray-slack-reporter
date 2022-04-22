@@ -62,6 +62,17 @@ const wdioService = require('reporter name/wdioService');
   },
   services: [[wdioService, {}]],
 
+
+
+onComplete: function(exitCode, config, capabilities, results) {
+    console.log("onComplete function");
+    const output = (`Passed: ${results.passed}, Retries: ${results.retries}, Failed: ${results.failed}, Finished: ${results.finished}`);
+    console.log(output);
+    fs.writeFile('output.txt', output, function(err, result) {
+      if(err) console.log('error', err);
+    });
+  },
+
 ```
 
 
