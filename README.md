@@ -43,6 +43,24 @@ testCafe
     .run();
 ```
 
+Usage in wdio framework,
+
+```js
+ reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'allure-results/',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,}
+    ],
+    wdioReporter
+  ],
+  plugins: {
+    'wdio-screenshot': {}
+  },
+  services: [[wdioService, {}]],
+```js
+
 ## Author
 
 vishal494
