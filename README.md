@@ -46,6 +46,8 @@ testCafe
 Usage in wdio framework,
 
 ```js
+const wdioReporter = require('reporter name/wdioReporter');
+const wdioService = require('reporter name/wdioService');
  reporters: [
     'spec',
     ['allure', {
@@ -59,7 +61,10 @@ Usage in wdio framework,
     'wdio-screenshot': {}
   },
   services: [[wdioService, {}]],
-```js
+
+```
+
+
 
 ## Author
 
